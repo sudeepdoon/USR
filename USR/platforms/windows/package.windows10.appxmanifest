@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Package IgnorableNamespaces="uap mp" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
-    <Identity Name="com.ionicframework.ionicblankapp" Publisher="CN=$username$" Version="0.0.1.0" />
+    <Identity Name="com.ultimateselfrealization.app" Publisher="CN=$username$" Version="0.0.0.1" />
     <mp:PhoneIdentity PhoneProductId="85c5f3c0-1828-11e6-8e94-916981d7f5ea" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
     <Properties>
-        <DisplayName>ionic-blankapp</DisplayName>
-        <PublisherDisplayName>Your Name Here</PublisherDisplayName>
+        <DisplayName>Ultimate Self Realization</DisplayName>
+        <PublisherDisplayName>Sudeep Manchanda</PublisherDisplayName>
         <Logo>images\StoreLogo.png</Logo>
     </Properties>
     <Dependencies>
@@ -14,8 +14,8 @@
         <Resource Language="x-generate" />
     </Resources>
     <Applications>
-        <Application Id="com.ionicframework.ionicblankapp" StartPage="ms-appx-web://com.ionicframework.ionicblankapp/www/index.html">
-            <uap:VisualElements BackgroundColor="#464646" Description="CordovaApp" DisplayName="ionic-blankapp" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <Application Id="com.ultimateselfrealization.app" StartPage="ms-appx-web://com.ultimateselfrealization.app/www/index.html">
+            <uap:VisualElements BackgroundColor="#464646" Description="CordovaApp" DisplayName="Ultimate Self Realization" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
                 <uap:SplashScreen Image="images\splashscreen.png" />
                 <uap:DefaultTile ShortName="ionic-blankapp" Square310x310Logo="images\Square310x310Logo.png" Square71x71Logo="images\Square71x71Logo.png" Wide310x150Logo="images\Wide310x150Logo.png" />
                 <uap:InitialRotationPreference>

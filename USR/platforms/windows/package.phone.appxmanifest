@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-    <Identity Name="com.ionicframework.ionicblankapp" Publisher="CN=$username$" Version="0.0.1.0" />
+    <Identity Name="com.ultimateselfrealization.app" Publisher="CN=$username$" Version="0.0.0.1" />
     <mp:PhoneIdentity PhoneProductId="85c5f3c0-1828-11e6-8e94-916981d7f5ea" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
     <Properties>
-        <DisplayName>ionic-blankapp</DisplayName>
-        <PublisherDisplayName>Your Name Here</PublisherDisplayName>
+        <DisplayName>Ultimate Self Realization</DisplayName>
+        <PublisherDisplayName>Sudeep Manchanda</PublisherDisplayName>
         <Logo>images\StoreLogo.png</Logo>
     </Properties>
     <Prerequisites>
@@ -15,8 +15,8 @@
         <Resource Language="x-generate" />
     </Resources>
     <Applications>
-        <Application Id="com.ionicframework.ionicblankapp" StartPage="www/index.html">
-            <m3:VisualElements BackgroundColor="transparent" Description="CordovaApp" DisplayName="ionic-blankapp" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <Application Id="com.ultimateselfrealization.app" StartPage="www/index.html">
+            <m3:VisualElements BackgroundColor="transparent" Description="CordovaApp" DisplayName="Ultimate Self Realization" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
                 <m3:DefaultTile Square71x71Logo="images\Square71x71Logo.png" Wide310x150Logo="images\Wide310x150Logo.png">
                     <m3:ShowNameOnTiles>
                         <m3:ShowOn Tile="square150x150Logo" />

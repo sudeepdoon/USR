@@ -1,7 +1,7 @@
 ﻿<ion-view style="" id="DailyThoughts" title="Daily Thoughts">
     <ion-content class="has-header" overflow-scroll="true" padding="true">
         <ion-list>
-            <ion-item ng-repeat="year in years" class="item" ui-sref="month({year : year.name})">
+            <ion-item ng-repeat="year in years" class="item" ui-sref="todMonth({year : year.name})">
                 {{year.name}}
             </ion-item>
         </ion-list>

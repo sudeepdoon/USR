@@ -1,0 +1,11 @@
+﻿<ion-view style="" id="thoughtsDay" title={{heading}}>
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+        Year = {{year.name}}
+        Month = {{month.name}}
+        <ion-list>
+            <ion-item ng-repeat="date in dates" class="item" onclick="window.cordova.InAppBrowser.open('http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html', '_blank', 'location=no')">
+                {{date.name}}: {{date.title}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
