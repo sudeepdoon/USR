@@ -20,5 +20,8 @@ angular.module('starter', ['ionic', 'starter.routes'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    cache.initCache();
+
   });
 })
