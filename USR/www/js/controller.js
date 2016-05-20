@@ -2,23 +2,36 @@
 
 .controller('dailyThoughtsController', ['$scope', '$http', 'tftdYearCache',
      function ($scope, $http, tftdYearCache) {
-         console.log("In the controller");
 
-         var cache = tftdYearCache.get('data');
+         var cache = tftdYearCache.get('tftdYearCache');
          if (cache) {
              $scope.years = cache;
          }
          else {
-             console.log("In else");
              $http.get('http://localhost:90/USR-Server/WebServices/dailyThoughts/years/')
                .success(function (data) {
-                   console.log("Getting data");
                    $scope.years = data;
-
-                   tftdYearCache.put('data', data);
+                   tftdYearCache.put('tftdYearCache', data);
                }
             );
          }
+     }
+])
+
+/*There is no caching here.. there should be something */
+.controller('todMonthController', ['$scope', '$stateParams', '$http', 
+     function ($scope, $stateParams, $http) {
+
+         var yearParam = {};
+         yearParam['name'] = $stateParams.year;
+         $scope.year = yearParam;
+
+        $url = 'http://localhost:90/USR-Server/WebServices/dailyThoughts/months/' + $stateParams.year + '/';
+        $http.get($url)
+        .success(function (data) {
+            $scope.months = data;
+           }
+       );
      }
 ])
 

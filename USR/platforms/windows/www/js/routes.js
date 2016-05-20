@@ -21,7 +21,8 @@
     .state('todMonth', {
         url: '/dailyThoughts/:year',
         templateUrl: 'thoughtsMonth.html',
-        controller: function ($scope, $stateParams) {
+        controller: 'todMonthController'
+        /*function ($scope, $stateParams) {
             var yearParam = {};
             yearParam['name'] = $stateParams.year;
             $scope.year = yearParam;
@@ -30,7 +31,7 @@
                             { 'name': 'November' },
                             { 'name': 'October' }
             ];
-        }
+        }*/
     })
 
     // List of dates with titles for which daily thoughts are available for the selected year and month
