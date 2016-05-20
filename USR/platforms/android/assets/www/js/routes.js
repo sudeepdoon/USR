@@ -8,18 +8,13 @@
 
     .state('home', {
         url: '/home',
-        templateUrl: 'home.html'
+        templateUrl: 'home.html',
     })
     // List of years for which daily thoughts are available
     .state('dailyThoughts', {
         url: '/dailyThoughts',
         templateUrl: 'dailyThoughts.html',
-        controller: function ($scope) {
-            $scope.years = [{ 'name': '2016' },
-                            { 'name': '2015' },
-                            { 'name': '2014' }
-            ];
-        }
+        controller: 'dailyThoughtsController'
     })
 
     // List of months for which daily thoughts are available for the selected year

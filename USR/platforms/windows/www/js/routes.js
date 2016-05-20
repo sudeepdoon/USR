@@ -8,18 +8,13 @@
 
     .state('home', {
         url: '/home',
-        templateUrl: 'home.html'
+        templateUrl: 'home.html',
     })
     // List of years for which daily thoughts are available
     .state('dailyThoughts', {
         url: '/dailyThoughts',
         templateUrl: 'dailyThoughts.html',
-        controller: function ($scope) {
-            $scope.years = [{ 'name': '2016' },
-                            { 'name': '2015' },
-                            { 'name': '2014' }
-            ];
-        }
+        controller: 'dailyThoughtsController'
     })
 
     // List of months for which daily thoughts are available for the selected year
@@ -55,12 +50,17 @@
             $scope.heading = $stateParams.month + " " + $stateParams.year;
 
             $scope.dates = [
-                            { 'name': '01', 'title': 'Day 1' },
-                            { 'name': '02', 'title': 'Day 2' },
-                            { 'name': '03', 'title': 'Day 3' },
-                            { 'name': '04', 'title': 'Day 4' },
-                            { 'name': '05', 'title': 'Day 5' }
+                            { 'name': '01', 'title': 'Day 1', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
+                            { 'name': '02', 'title': 'Day 2', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
+                            { 'name': '03', 'title': 'Day 3', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
+                            { 'name': '04', 'title': 'Day 4', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
+                            { 'name': '05', 'title': 'Day 5', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' }
             ];
+
+            $scope.openInAppBrowser = function ($url) {
+                // Open in app browser
+                window.open($url, '_blank');
+            };
         }
     });
 

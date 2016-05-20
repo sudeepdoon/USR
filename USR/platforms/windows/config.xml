@@ -2,7 +2,7 @@
 <widget android-versionCode="1" id="com.ultimateselfrealization.app" version="0.0.1" windows-packageVersion="0.0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Ultimate Self Realization</name>
     <description>Ultimate Self Realization</description>
-    <author email="you@example.com" href="http://example.com.com/">
+    <author email="sudeepmanchanda@outlook.com" href="http://example.com.com/">
      Sudeep Manchanda
     </author>
     <content src="index.html" />
