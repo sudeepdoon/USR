@@ -1,10 +1,8 @@
 ﻿<ion-view style="" id="thoughtsDay" title={{heading}}>
     <ion-content class="has-header" overflow-scroll="true" padding="true">
-        Year = {{year.name}}
-        Month = {{month.name}}
         <ion-list>
-            <ion-item ng-repeat="date in dates" class="item" ng-click="openInAppBrowser('{{date.URL}}')">
-                {{date.name}}: {{date.title}}
+            <ion-item ng-repeat="date in dates" class="item" ng-click="openInAppBrowser('{{date.url}}')">
+                {{date.date}}: {{date.title}}
             </ion-item>
         </ion-list>
     </ion-content>

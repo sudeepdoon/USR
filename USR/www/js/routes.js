@@ -26,33 +26,9 @@
 
     // List of dates with titles for which daily thoughts are available for the selected year and month
     .state('todDate', {
-        url: '/dailyThoughts/:month?year',
+        url: '/dailyThoughts/:month?year,monthID',
         templateUrl: 'thoughtsDay.html',
-        controller: function ($scope, $stateParams) {
-
-            var yearParam = {};
-            yearParam['name'] = $stateParams.year;
-            $scope.year = yearParam;
-
-            var monthParam = {};
-            monthParam['name'] = $stateParams.month;
-            $scope.month = monthParam;
-
-            $scope.heading = $stateParams.month + " " + $stateParams.year;
-
-            $scope.dates = [
-                            { 'name': '01', 'title': 'Day 1', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
-                            { 'name': '02', 'title': 'Day 2', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
-                            { 'name': '03', 'title': 'Day 3', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
-                            { 'name': '04', 'title': 'Day 4', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' },
-                            { 'name': '05', 'title': 'Day 5', 'URL': 'http://www.sda-archives.com/tftd/tftd/2016/mar/tftd_033116.html' }
-            ];
-
-            $scope.openInAppBrowser = function ($url) {
-                // Open in app browser
-                window.open($url, '_blank');
-            };
-        }
-    });
+        controller: 'todDateController'
+    })
 
 });

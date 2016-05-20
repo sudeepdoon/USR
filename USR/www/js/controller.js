@@ -35,6 +35,35 @@
      }
 ])
 
+/*There is no caching here.. there should be something */
+.controller('todDateController', ['$scope', '$stateParams', '$http',
+     function ($scope, $stateParams, $http) {
+
+         var yearParam = {};
+         yearParam['name'] = $stateParams.year;
+         $scope.year = yearParam;
+
+         var monthParam = {};
+         monthParam['name'] = $stateParams.month;
+         $scope.month = monthParam;
+
+         $scope.heading = $stateParams.month + " " + $stateParams.year;
+
+         $url = 'http://localhost:90/USR-Server/WebServices/dailyThoughts/dates/' + $stateParams.year + '/' + $stateParams.monthID + '/';
+
+         $http.get($url)
+         .success(function (data) {
+             $scope.dates = data;
+         }
+        );
+
+         $scope.openInAppBrowser = function ($url) {
+             // Open in app browser
+             window.open($url, '_blank');
+         };
+     }
+])
+
 /*
 // Displays a list of articles in the river
 myApp.controller('MyMain', ['$scope', '$http', 'myCache',
