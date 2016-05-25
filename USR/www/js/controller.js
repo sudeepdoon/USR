@@ -25,8 +25,7 @@
         $http.get('http://localhost:90/USR-Server/WebServices/dailyThoughts/years/')
         .success(function (data) {
                 $scope.years = data;
-                tftdYearCache.put('tftdYearCache', data);
-            }
+                }
             );
         }  
     ])
