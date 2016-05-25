@@ -1,8 +1,8 @@
 ﻿<ion-view style="" id="thoughtsMonth" title={{year.name}}>
     <ion-content class="has-header" overflow-scroll="true" padding="true">
         <ion-list>
-            <ion-item ng-repeat="month in months" class="item" ui-sref="todDate({monthID: month.id, month: month.name, year: year.name})">
-                {{month.name}}
+            <ion-item ng-repeat="month in months" class="item" ui-sref="menu.todDate({monthID: month.id, month: month.name, year: year.name})">
+                <h2>{{month.name}}</h2>
             </ion-item>
         </ion-list>
     </ion-content>

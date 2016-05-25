@@ -2,33 +2,70 @@
 
 .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/side-menu/home');
 
     $stateProvider
 
-    .state('home', {
-        url: '/home',
-        templateUrl: 'home.html',
+    .state('menu', {
+        url: '/side-menu',
+        templateUrl: 'sideMenu.html',
+        abstract: true
     })
+
+    .state('menu.home', {
+        url: '/home',
+        views :{
+            'side-menu':
+                    {
+                    templateUrl: 'home.html',
+                    }
+                }
+    })
+
     // List of years for which daily thoughts are available
-    .state('dailyThoughts', {
+    .state('menu.dailyThoughts', {
         url: '/dailyThoughts',
-        templateUrl: 'dailyThoughts.html',
-        controller: 'dailyThoughtsController'
+        views: {
+            'side-menu':
+                {
+                    templateUrl: 'dailyThoughts.html',
+                    controller: 'dailyThoughtsController'
+                }
+        }
     })
 
     // List of months for which daily thoughts are available for the selected year
-    .state('todMonth', {
+    .state('menu.todMonth', {
         url: '/dailyThoughts/:year',
-        templateUrl: 'thoughtsMonth.html',
-        controller: 'todMonthController'
+        views: {
+            'side-menu':
+                {
+                    templateUrl: 'thoughtsMonth.html',
+                    controller: 'todMonthController'
+                }
+        }
     })
 
     // List of dates with titles for which daily thoughts are available for the selected year and month
-    .state('todDate', {
+    .state('menu.todDate', {
         url: '/dailyThoughts/:month?year,monthID',
-        templateUrl: 'thoughtsDay.html',
-        controller: 'todDateController'
+        views: {
+            'side-menu':
+                {
+                    templateUrl: 'thoughtsDay.html',
+                    controller: 'todDateController'
+                }
+        }
+    })
+
+    .state('menu.comingSoon', {
+        url: '/comingSoon',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'comingSoon.html',
+                    }
+        }
     })
 
 });
