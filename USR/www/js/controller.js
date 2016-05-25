@@ -1,5 +1,6 @@
 ﻿angular.module('starter.controllers', [])
 
+/*
 .controller('dailyThoughtsController', ['$scope', '$http', 'tftdYearCache',
      function ($scope, $http, tftdYearCache) {
 
@@ -17,6 +18,18 @@
          }
      }
 ])
+*/
+ // Same controller as above but without caching.. will have to think about caching technique 
+    .controller('dailyThoughtsController', ['$scope', '$http',
+     function ($scope, $http) {
+        $http.get('http://localhost:90/USR-Server/WebServices/dailyThoughts/years/')
+        .success(function (data) {
+                $scope.years = data;
+                tftdYearCache.put('tftdYearCache', data);
+            }
+            );
+        }  
+    ])
 
 /*There is no caching here.. there should be something */
 .controller('todMonthController', ['$scope', '$stateParams', '$http', 
