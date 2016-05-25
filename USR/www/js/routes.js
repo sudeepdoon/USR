@@ -68,4 +68,15 @@
         }
     })
 
+        .state('menu.viewDailyThought', {
+            url: '/viewDailyThought/:title?url',
+            views: {
+                'side-menu':
+                        {
+                            templateUrl: 'viewDailyThought.html',
+                            controller: 'viewDailyThoughtController'
+                        }
+            }
+        })
+
 });

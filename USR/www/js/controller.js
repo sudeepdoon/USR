@@ -69,11 +69,21 @@
          }
         );
 
+         /* For now going with iframe 
          $scope.openInAppBrowser = function ($url) {
              // Open in app browser
              window.open($url, '_blank');
          };
+         */
      }
+])
+
+.controller('viewDailyThoughtController', ['$scope', '$stateParams','$sce',
+     function ($scope, $stateParams, $sce) {
+
+        $scope.title = $stateParams.title;
+        $scope.url = $sce.trustAsResourceUrl($stateParams.url);
+    }
 ])
 
 /*

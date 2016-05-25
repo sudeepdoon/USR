@@ -33,5 +33,4 @@
   <preference name="android-maxSdkVersion" value="23" />
   <preference name="android-targetSdkVersion" value="15" />
   <preference name="deployment-target" value="1" />
-  <plugin name="cordova-plugin-inappbrowser" version="1.2.1" />
 </widget>

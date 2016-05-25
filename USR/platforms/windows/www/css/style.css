@@ -1,1 +1,7 @@
-﻿/* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like */
+#comingsoon{
+    background:url('../img/ComingSoon.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}

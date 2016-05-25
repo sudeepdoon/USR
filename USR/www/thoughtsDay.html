@@ -1,7 +1,8 @@
 ﻿<ion-view style="" id="thoughtsDay" title={{heading}}>
     <ion-content class="has-header" overflow-scroll="true" padding="true">
         <ion-list>
-            <ion-item ng-repeat="date in dates" class="item" ng-click="openInAppBrowser('{{date.url}}')">
+            <!--<ion-item ng-repeat="date in dates" class="item" ng-click="openInAppBrowser('{{date.url}}')">-->
+            <ion-item ng-repeat="date in dates" class="item" ui-sref="menu.viewDailyThought({title: date.date + ' '+ heading, url: date.url})">
                 <h2>{{date.title}}</h2>
                 <p>{{date.date}} {{heading}}</p>
             </ion-item>
