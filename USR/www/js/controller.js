@@ -86,6 +86,42 @@
     }
 ])
 
+.controller('weeklyLessonsController', ['$scope', '$http',
+    function ($scope, $http) {
+        $http.get('http://localhost:90/USR-Server/WebServices/weeklyLessons/series/')
+        .success(function (data) {
+            $scope.series = data;
+        }
+            );
+    }
+])
+
+
+.controller('wlSeriesController', ['$scope', '$stateParams', '$http',
+     function ($scope, $stateParams, $http) {
+
+         var seriesParam = {};
+         seriesParam['seriesID'] = $stateParams.seriesID;
+         seriesParam['seriesTitle'] = $stateParams.seriesTitle;
+         $scope.series = seriesParam;
+
+         $url = 'http://localhost:90/USR-Server/WebServices/weeklyLessons/lessons/' + $stateParams.seriesID + '/';
+         $http.get($url)
+         .success(function (data) {
+             $scope.lessons = data;
+         }
+        );
+     }
+])
+
+.controller('viewWeeklyLessonController', ['$scope', '$stateParams', '$sce',
+     function ($scope, $stateParams, $sce) {
+
+         $scope.title = $stateParams.title;
+         $scope.url = $sce.trustAsResourceUrl($stateParams.url);
+     }
+])
+
 /*
 // Displays a list of articles in the river
 myApp.controller('MyMain', ['$scope', '$http', 'myCache',

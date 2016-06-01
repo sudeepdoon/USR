@@ -1,0 +1,11 @@
+﻿<ion-view style="" id="wlSeries" title={{series.seriesTitle}}>
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+        <ion-list>
+            <!--<ion-item ng-repeat="date in dates" class="item" ng-click="openInAppBrowser('{{lesson.Url}}')">-->
+            <ion-item ng-repeat="lesson in lessons" class="item" ui-sref="menu.viewWeeklyLesson({title: lesson.Code + ' '+ heading, url: lesson.Url})">
+                <h2>{{lesson.Title}}</h2>
+                <p>{{lesson.Code}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

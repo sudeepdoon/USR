@@ -58,6 +58,40 @@
         }
     })
 
+    .state('menu.viewDailyThought', {
+        url: '/viewDailyThought/:title?url',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'viewDailyThought.html',
+                        controller: 'viewDailyThoughtController'
+                    }
+        }
+    })
+
+
+    .state('menu.weeklyLessons', {
+        url: '/weeklyLessons',
+        views: {
+            'side-menu':
+                {
+                    templateUrl: 'weeklyLessons.html',
+                    controller: 'weeklyLessonsController'
+                }
+        }
+    })
+
+    .state('menu.wlSeries', {
+        url: '/weeklyLessons/:seriesID?seriesTitle',
+        views: {
+            'side-menu':
+                {
+                    templateUrl: 'wlSeries.html',
+                    controller: 'wlSeriesController'
+                }
+        }
+    })
+
     .state('menu.comingSoon', {
         url: '/comingSoon',
         views: {
@@ -68,15 +102,15 @@
         }
     })
 
-        .state('menu.viewDailyThought', {
-            url: '/viewDailyThought/:title?url',
-            views: {
-                'side-menu':
-                        {
-                            templateUrl: 'viewDailyThought.html',
-                            controller: 'viewDailyThoughtController'
-                        }
-            }
-        })
+    .state('menu.viewWeeklyLesson', {
+        url: '/viewDailyThought/:title?url',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'viewWeeklyLesson.html',
+                        controller: 'viewWeeklyLessonController'
+                    }
+        }
+    })
 
 });
