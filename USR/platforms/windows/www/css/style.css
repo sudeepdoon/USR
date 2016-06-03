@@ -1,7 +1,38 @@
-/* Empty. Add your own CSS if you like */
+﻿/* Empty. Add your own CSS if you like */
+
 #comingsoon{
     background:url('../img/ComingSoon.png');
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
 }
+
+
+ol{
+    list-style-type:decimal;
+    padding-left: 5%;
+}
+
+ul{
+    list-style-type:circle;
+    padding-left: 5%;
+}
+ 
+
+/* Used in Tilak.html*/
+
+#Tilak-Left-Div{
+    float:left;
+    width: 50%;
+}
+
+#Tilak-Right-Div{
+    float:right;
+    width: 50%;
+}
+
+#Tilak-Last-Div {
+    width: 100%;
+    clear:both;
+}
+    

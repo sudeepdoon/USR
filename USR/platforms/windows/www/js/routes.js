@@ -22,6 +22,7 @@
                 }
     })
 
+     //---------------------------------------- DAILY THOUGHTS ------------------------------
     // List of years for which daily thoughts are available
     .state('menu.dailyThoughts', {
         url: '/dailyThoughts',
@@ -70,6 +71,8 @@
     })
 
 
+     //---------------------------------------- WEEKLY LESSONS ------------------------------
+
     .state('menu.weeklyLessons', {
         url: '/weeklyLessons',
         views: {
@@ -92,15 +95,6 @@
         }
     })
 
-    .state('menu.comingSoon', {
-        url: '/comingSoon',
-        views: {
-            'side-menu':
-                    {
-                        templateUrl: 'comingSoon.html',
-                    }
-        }
-    })
 
     .state('menu.viewWeeklyLesson', {
         url: '/viewDailyThought/:title?url',
@@ -112,5 +106,92 @@
                     }
         }
     })
+
+
+    //---------------------------------------- SIDE MENU ------------------------------
+
+    .state('menu.aboutUs', {
+        url: '/aboutUs',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'aboutUs.html',
+                    }
+        }
+    })
+
+    //---------------------------------------- STATIC CONTENT ------------------------------
+
+    .state('menu.Teachings', {
+        url: '/teachings',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'Teachings.html',
+                    }
+        }
+    })
+
+    .state('menu.MeatAndEnv', {
+        url: '/meatAndEnv',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'MeatAndEnv.html',
+                    }
+        }
+    })
+
+    .state('menu.NoTea', {
+        url: '/NoTea',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'NoTea.html',
+                    }
+        }
+    })
+
+    .state('menu.NoOnion', {
+        url: '/NoOnion',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'NoOnion.html',
+                    }
+        }
+    })
+
+    .state('menu.HowToChant', {
+        url: '/HowToChant',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'HowToChant.html',
+                    }
+        }
+    })
+
+    .state('menu.Tilak', {
+        url: '/Tilak',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'Tilak.html',
+                    }
+        }
+    })
+
+    .state('menu.comingSoon', {
+        url: '/comingSoon',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'comingSoon.html',
+                    }
+        }
+    })
+
+
 
 });

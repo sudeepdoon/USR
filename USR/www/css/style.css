@@ -1,7 +1,20 @@
 /* Empty. Add your own CSS if you like */
+
 #comingsoon{
     background:url('../img/ComingSoon.png');
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
 }
+
+
+ol{
+    list-style-type:decimal;
+    padding-left: 5%;
+}
+
+ul{
+    list-style-type:circle;
+    padding-left: 5%;
+}
+ 

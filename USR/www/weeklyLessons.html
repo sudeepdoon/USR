@@ -1,7 +1,7 @@
-﻿<ion-view style="" id="WeeklyLessons" title="WeeklyLessons">
+﻿<ion-view style="" id="WeeklyLessons" title="Weekly Lessons">
     <ion-content class="has-header" overflow-scroll="true" padding="true">
         <ion-list>
-            <ion-item ng-repeat="item in series" class="item" ui-sref="menu.wlSeries({seriesID : item.ID, seriesTitle : item.Title})">
+            <ion-item ng-repeat="item in series" class="item item-text-wrap" ui-sref="menu.wlSeries({seriesID : item.ID, seriesTitle : item.Title})">
                 <h2>{{item.Title}}</h2>
             </ion-item>
         </ion-list>
