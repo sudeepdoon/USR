@@ -18,8 +18,14 @@ angular.module('starter', ['ionic', 'starter.routes', 'starter.controllers', 'st
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
-      StatusBar.styleDefault();
+        StatusBar.styleDefault();
     }
 
   });
+})
+
+    
+.config(function ($ionicConfigProvider) {
+    //Configuring the back button
+    $ionicConfigProvider.backButton.text('').icon('ion-chevron-left').previousTitleText(false);;
 })

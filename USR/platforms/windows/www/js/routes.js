@@ -182,6 +182,57 @@
         }
     })
 
+    .state('menu.Shiva', {
+        url: '/Shiva',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'Shiva.html',
+                    }
+        }
+    })
+
+    .state('menu.Guru', {
+        url: '/Guru',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'Guru.html',
+                    }
+        }
+    })
+
+    .state('menu.Ekadasi', {
+        url: '/Ekadasi',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'Ekadasi.html',
+                    }
+        }
+    })
+
+    .state('menu.Offering', {
+        url: '/Offering',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'Offering.html',
+                    }
+        }
+    })
+
+    .state('menu.KCAtHome', {
+        url: '/KCAtHome',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'KCAtHome.html',
+                    }
+        }
+    })
+
+
     .state('menu.comingSoon', {
         url: '/comingSoon',
         views: {

@@ -18,21 +18,3 @@ ul{
     padding-left: 5%;
 }
  
-
-/* Used in Tilak.html*/
-
-#Tilak-Left-Div{
-    float:left;
-    width: 50%;
-}
-
-#Tilak-Right-Div{
-    float:right;
-    width: 50%;
-}
-
-#Tilak-Last-Div {
-    width: 100%;
-    clear:both;
-}
-    
