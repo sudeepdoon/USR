@@ -1,0 +1,13 @@
+﻿<ion-view style="" id="schedule" title="Schedule">
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+
+        <div class="row" ng-repeat="item in schedule">
+            <div class="col">
+                {{item.Date | date}}
+            </div>
+            <div class="col">
+                {{item.Title}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

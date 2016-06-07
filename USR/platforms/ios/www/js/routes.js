@@ -120,6 +120,17 @@
         }
     })
 
+    .state('menu.schedule', {
+        url: '/schedule',
+        views: {
+            'side-menu':
+                    {
+                        templateUrl: 'schedule.html',
+                        controller: 'scheduleController'
+                    }
+        }
+    })
+
     //---------------------------------------- STATIC CONTENT ------------------------------
 
     .state('menu.Teachings', {

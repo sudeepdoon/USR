@@ -122,6 +122,17 @@
      }
 ])
 
+.controller('scheduleController', ['$scope', '$http',
+    function ($scope, $http) {
+        $http.get('http://localhost:90/USR-Server/WebServices/schedule/')
+        .success(function (data) {
+            $scope.schedule = data;
+              }
+            );
+    }
+])
+
+
 /*
 // Displays a list of articles in the river
 myApp.controller('MyMain', ['$scope', '$http', 'myCache',
